@@ -17,12 +17,18 @@ print(iris)
 print(iris.data.shape)
 #Iris data has 150 rows and 5 columns
 
-#Print mean of First 4 columns
+#Print mean,max,min and median of First 4 columns
 
 for i in range (0,4):
     column =iris[:,i]
     meancolumn=numpy.mean(column)
     print("Mean of column ", i+1," is:",meancolumn)
+    mediancolumn=numpy.median(column)
+    print("Median of column ", i+1," is:",mediancolumn)
+    maxcolumn=numpy.max(column)
+    print("Max of column ", i+1," is:",maxcolumn)
+    mincolumn=numpy.min(column)
+    print("Min of column ", i+1," is:",mincolumn)
 #Plot each columns data
     pl.hist(column)
     pl.show()
