@@ -6,7 +6,7 @@
 #Iris Dataset initial exploration
 #Will provide summary stats and plots for the Iris Dataset
 ######################################################################################################################
-
+import pandas
 import numpy
 import matplotlib.pyplot as pl
 #Open the IRIS.CSV FILE
@@ -32,3 +32,16 @@ for i in range (0,4):
 #Plot each columns data
     pl.hist(column)
     pl.show()
+
+
+#Use pandas to capture the categorical variables in column 5 and solve issues of the NANs    
+dataset = pandas.read_csv('C:/Users/DELL PC/Documents/GMIT DATA ANALYTICS/Programming and Scripting/iris.csv')
+print(dataset)
+#Dataset formatted neater and includes the categorical variables
+
+#Print a statistical summary about the dataset
+print(dataset.describe()) 
+
+# box and whisker plots
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+pl.show()
