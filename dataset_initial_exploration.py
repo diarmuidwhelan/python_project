@@ -17,7 +17,8 @@ print(iris)
 print(iris.data.shape)
 #Iris data has 150 rows and 5 columns
 
-#Print mean,max,min and median of First 4 columns
+#loop through each of first four columns using for loop
+#Print mean,max,min and median of first 4 columns
 
 for i in range (0,4):
     column =iris[:,i]
@@ -34,14 +35,17 @@ for i in range (0,4):
     pl.show()
 
 
-#Use pandas to capture the categorical variables in column 5 and solve issues of the NANs    
-dataset = pandas.read_csv('C:/Users/DELL PC/Documents/GMIT DATA ANALYTICS/Programming and Scripting/iris.csv')
+#Use pandas to capture the categorical variables in column 5 and solve issues of the NANs 
+#Iris_data.csv includes column headers   
+dataset = pandas.read_csv('C:/Users/DELL PC/Documents/GMIT DATA ANALYTICS/Programming and Scripting/iris_data.csv')
 print(dataset)
 #Dataset formatted neater and includes the categorical variables
+#Number of each species in each sample
+
 
 #Print a statistical summary about the dataset
 print(dataset.describe()) 
-
+#Means are same as calculated above. Describe function also provides percentile and standard deviation information to summarise the distribution of the data
 # box and whisker plots
 dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
 pl.show()
