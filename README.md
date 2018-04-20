@@ -39,7 +39,7 @@ In the same vein column 4 looks to be quite spread out between 0.1cm and 1.5cm. 
 
 ![alt text](https://github.com/diarmuidwhelan/python_project/blob/master/Column_4.png "Column 4 Distribution")
 
-Boxplot of Iris Dataset
+
 The describe function produces a table with key characteristics of each column. These reinforce the above observations about the column distributions. The 3rd columns standard deviation is significantly greater than the other 3 columns, with the 2nd column exhibiting quite a narrow standard deviation.
 
 
