@@ -12,7 +12,7 @@ The project entails researching the Iris data set, and then writing documentatio
 
 
 # DATASET SUMMARY
-The Iris data set is a well known data set collected by Ronald Fisher in 1936. It contains data on characteristics of 3 different species of iris flowers.
+The Iris data set is a well known data set collected by Ronald Fisher in 1936. It contains data on characteristics of 3 different species of iris flowers. The dataset contains the petal length and width and sepal length and width for 50 of each iris species type, Iris-setosa, iris-versicolor and Iris-virginica. The dataset is often referred to as Anderson's Iris data set because Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species. Two of the three species were collected in the Gaspé Peninsula. Fisher developed a linear discriminant model to distinguish the species from each other, using a combination of the four characteristics. 
 
 
 
@@ -42,8 +42,21 @@ In the same vein column 4 looks to be quite spread out between 0.1cm and 1.5cm. 
 
 The describe function produces a table with key characteristics of each column. These reinforce the above observations about the column distributions. The 3rd columns standard deviation is significantly greater than the other 3 columns, with the 2nd column exhibiting quite a narrow standard deviation.
 
+       sepal_length  sepal_width  petal_length  petal_width
+count    150.000000   150.000000    150.000000   150.000000
+mean       5.843333     3.054000      3.758667     1.198667
+std        0.828066     0.433594      1.764420     0.763161
+min        4.300000     2.000000      1.000000     0.100000
+25%        5.100000     2.800000      1.600000     0.300000
+50%        5.800000     3.000000      4.350000     1.300000
+75%        6.400000     3.300000      5.100000     1.800000
+max        7.900000     4.400000      6.900000     2.500000
+
 
 ![alt text](https://github.com/diarmuidwhelan/python_project/blob/master/boxplot_iris.png "Box and Whisker Plot for Columns 1-4")
+
+
+
 # References
 https://en.wikipedia.org/wiki/Iris_flower_data_set
 
