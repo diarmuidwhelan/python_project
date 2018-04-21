@@ -41,8 +41,7 @@ dataset = pandas.read_csv('C:/Users/DELL PC/Documents/GMIT DATA ANALYTICS/Progra
 print(dataset)
 #Dataset formatted neater and includes the categorical variables
 #Number of each species in each sample
-
-
+print(dataset.groupby('species').size())
 #Print a statistical summary about the dataset
 print(dataset.describe()) 
 #Means are same as calculated above. Describe function also provides percentile and standard deviation information to summarise the distribution of the data
