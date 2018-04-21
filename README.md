@@ -1,3 +1,6 @@
+
+
+
 # python_project
 Python Project for Scripting and Programming Module
 Due April 29th
@@ -35,6 +38,7 @@ Column 3 is somewhat different in it's distribution from columns 1 and 2. It's v
 
 ![alt text](https://github.com/diarmuidwhelan/python_project/blob/master/Column_3.png "Column 3 Distribution")
 
+
 In the same vein column 4 looks to be quite spread out between 0.1cm and 1.5cm. Mean is 1.198cm whilst median is 1.3cm.
 
 ![alt text](https://github.com/diarmuidwhelan/python_project/blob/master/Column_4.png "Column 4 Distribution")
@@ -42,15 +46,18 @@ In the same vein column 4 looks to be quite spread out between 0.1cm and 1.5cm. 
 
 The describe function produces a table with key characteristics of each column. These reinforce the above observations about the column distributions. The 3rd columns standard deviation is significantly greater than the other 3 columns, with the 2nd column exhibiting quite a narrow standard deviation.
 
-       sepal_length  sepal_width  petal_length  petal_width
-count    150.000000   150.000000    150.000000   150.000000
-mean       5.843333     3.054000      3.758667     1.198667
-std        0.828066     0.433594      1.764420     0.763161
-min        4.300000     2.000000      1.000000     0.100000
-25%        5.100000     2.800000      1.600000     0.300000
-50%        5.800000     3.000000      4.350000     1.300000
-75%        6.400000     3.300000      5.100000     1.800000
-max        7.900000     4.400000      6.900000     2.500000
+
+|Measure    | Sepal Length| Sepal Width| Petal Length| Petal Width|
+| ----------|:-----------:| ----------:|------------:|-----------:|
+| count     |   150.0000  |  150.0000  | 150.0000    |  150.0000  |
+| mean      |   5.843333  |  3.054000  | 3.758667    |  1.198667  |
+| std       |   0.828066  |  0.433594  | 1.764420    |  0.763161  |
+| min       |   4.300000  |  2.000000  | 1.000000    |  0.100000  |
+| 25%       |   5.100000  |  2.800000  | 1.600000    |  0.300000  |
+| 50%       |   5.800000  |  3.000000  | 4.350000    |  1.300000  |
+| 75%       |   6.400000  |  3.300000  | 5.100000    |  1.800000  |
+| max       |   7.900000  |  4.400000  | 6.900000    |  2.500000  |
+
 
 
 ![alt text](https://github.com/diarmuidwhelan/python_project/blob/master/boxplot_iris.png "Box and Whisker Plot for Columns 1-4")
