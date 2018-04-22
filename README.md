@@ -62,9 +62,16 @@ The describe function produces a table with key characteristics of each column. 
 
 ![alt text](https://github.com/diarmuidwhelan/python_project/blob/master/boxplot_iris.png "Box and Whisker Plot for Columns 1-4")
 
+# Predictive Modelling
+Fisher used the 4 characteristics, sepal length and width and petal length and width, to build a model that could predict the iris species type from these. The model built was a linear model. In iris_model.py, I am going to attempt to use some of python's machine learning packages to develop a model to predict species type. 
+
 
 
 # References
 https://en.wikipedia.org/wiki/Iris_flower_data_set
 
 http://archive.ics.uci.edu/ml/datasets/Iris
+
+www.scipy-lectures.org/advanced/scikit-learn/
+
+https://github.com/jakevdp/sklearn_pycon2015
