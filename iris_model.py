@@ -6,24 +6,26 @@
 #Iris Dataset predictive model
 #Will attempt to build a predictive model using machine learning techniques for the Iris Dataset
 ######################################################################################################################
+import numpy as np
 import pandas
-from sklearn import model_selection
 import matplotlib.pyplot as plt
-#Load Data
-iris = pandas.read_csv('C:/Users/DELL PC/Documents/GMIT DATA ANALYTICS/Programming and Scripting/iris_data.csv')
-#Need to split the data into a test and training set. Will split it 80% training and 20% test
-array = iris.values
-X = array[:,0:4]
-Y = array[:,4]
-validation_size = 0.2
-seed = 7
-X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=validation_size, random_state=seed)
+from sklearn import neighbors, datasets
+#Load Data USING THE SAVED DATASET IN SKLEARN PACKAGE.
+#THIS IS EASIER TO USE AND READY MADE FOR SOME OF THE MACHINE LEARNING FUNCTIONS
+iris = datasets.load_iris()
+X, y = iris.data, iris.target
 
-#FIT KNN
- 
-#FIT SVM (Support Vector Machine)
-from sklearn  import svm 
-svc = svm.SVC(kernel='linear') # Support Vector Classifier
-svc.fit(X,Y)
+# create the KNN model
+knn = neighbors.KNeighborsClassifier(n_neighbors=5) #LOOKS FOR THE 5 CLOSEST DATA POINTS
 
-#FIT K-MEANS
+# fit the KNN model
+knn.fit(X, y)
+
+
+# Use the predict method to predict the species type of certain characteristics
+# If we wanted to know what kind of iris has 2cm x 4cm sepal and 3cm x 3cm petal?
+result = knn.predict([[2, 3, 3, 3],])
+print(iris.target_names[result])
+#can also predict the probability of certain features being each species type
+prob = knn.predict_proba([[2, 3, 3, 3],])
+print(prob)
