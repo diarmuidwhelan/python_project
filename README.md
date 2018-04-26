@@ -73,7 +73,9 @@ First I plot the relationshsip between some of the features.
 
 From the above plots, we can see how the features are related and how this differs by species type. In the petal length and width there looks to be a linear positive correlation between length and width and each species type looks to have distinct petal lengtha nd width ranges.
 
-K Means clustering can be used on the features to attempt to group the species together.
+K Means clustering can be used on the features to attempt to group the species together. 
+
+In iris_model.py, I fit a Support Vector Classification and K nearest neighbours model to the iris data. I attempt to validate and test the accuracy of these models by splitting the dataset into a training and test sample.
 
 
 # References
