@@ -18,8 +18,6 @@ The project entails researching the Iris data set, and then writing documentatio
 The Iris data set is a well known data set collected by Ronald Fisher in 1936. It contains data on characteristics of 3 different species of iris flowers. The dataset contains the petal length and width and sepal length and width for 50 of each iris species type, Iris-setosa, iris-versicolor and Iris-virginica. The dataset is often referred to as Anderson's Iris data set because Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species. Two of the three species were collected in the Gaspé Peninsula. Fisher developed a linear discriminant model to distinguish the species from each other, using a combination of the four characteristics. 
 
 
-
-
 # Initial Exploration
 There are 5 columns and 150 rows in the dataset.
 Columns 1,2,3 and 4 are numerical variables whilst column 5 is a categorical variable.
@@ -65,6 +63,17 @@ The describe function produces a table with key characteristics of each column. 
 # Predictive Modelling
 Fisher used the 4 characteristics, sepal length and width and petal length and width, to build a model that could predict the iris species type from these. The model built was a linear model. In iris_model.py, I am going to attempt to use some of python's machine learning packages to develop a model to predict species type. 
 
+First I plot the relationshsip between some of the features.
+
+![alt text](https://github.com/diarmuidwhelan/python_project/blob/master/Sepal_features_relationship.png "Sepal Length & Width")
+
+
+![alt text](https://github.com/diarmuidwhelan/python_project/blob/master/petal_feature_relationship.png "Petal Length & Width")
+
+
+From the above plots, we can see how the features are related and how this differs by species type. In the petal length and width there looks to be a linear positive correlation between length and width and each species type looks to have distinct petal lengtha nd width ranges.
+
+K Means clustering can be used on the features to attempt to group the species together.
 
 
 # References
