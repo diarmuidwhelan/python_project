@@ -49,7 +49,7 @@ The describe function produces a table with key characteristics of each column. 
 | ----------|:-----------:| ----------:|------------:|-----------:|
 | count     |   150.0000  |  150.0000  | 150.0000    |  150.0000  |
 | mean      |   5.843333  |  3.054000  | 3.758667    |  1.198667  |
-| std       |   0.828066  |  0.433594  | 1.764420    |  0.763161  |
+ std       |   0.828066  |  0.433594  | 1.764420    |  0.763161  |
 | min       |   4.300000  |  2.000000  | 1.000000    |  0.100000  |
 | 25%       |   5.100000  |  2.800000  | 1.600000    |  0.300000  |
 | 50%       |   5.800000  |  3.000000  | 4.350000    |  1.300000  |
@@ -78,7 +78,7 @@ In iris_model.py, I fit a Support Vector Classification and K nearest neighbours
 
 I attempt to validate and test the accuracy of these models by splitting the dataset into a training and test sample.The results appear to be quite positive. In the case of the K Nearest Neighbours model the number of neighbours chosen is arbitrary. We can optimise the number chosen by looping a few different options and picking the best result. It turns out 1,5 and 10 have the best accuracy with 20 and 30 progressively worse the higher the number of neighbours. 
 
-Further improvements may be made by exploring the different kernel types in SVC and lookinbg at other techniques such as decision trees and random forests.
+Further improvements may be made by exploring the different kernel types in SVC and looking at other techniques such as decision trees and random forests.
 
 
 # References
