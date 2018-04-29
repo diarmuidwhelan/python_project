@@ -138,3 +138,11 @@ print("{0} / {1} correct".format(np.sum(Y_validation == y_pred_svc), len(Y_valid
 
 #CALCULATE ACCURACY SCORE
 print(accuracy_score(Y_validation, y_pred_svc))
+
+
+
+#in the case of the knn model the number of neighbours chosen is arbitrary. We can optimise the number chosen
+for n_neighbors in [1, 5, 10, 20, 30]:
+    knn = neighbors.KNeighborsClassifier(n_neighbors)
+    knn.fit(X_train, Y_train)
+    print(n_neighbors, knn.score(X_validation, Y_validation))
