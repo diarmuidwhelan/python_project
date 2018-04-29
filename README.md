@@ -63,7 +63,7 @@ The describe function produces a table with key characteristics of each column. 
 # Predictive Modelling
 Fisher used the 4 characteristics, sepal length and width and petal length and width, to build a model that could predict the iris species type from these. The model built was a linear model. In iris_model.py, I am going to attempt to use some of python's machine learning packages to develop a model to predict species type. 
 
-First I plot the relationshsip between some of the features.
+First I plot the relationshsip between some of the features.K Means clustering can be used on the features to attempt to group the species together. Here I attempt to  build 3 groups - 1 for each species type. 
 
 ![alt text](https://github.com/diarmuidwhelan/python_project/blob/master/Sepal_features_relationship.png "Sepal Length & Width")
 
@@ -71,11 +71,14 @@ First I plot the relationshsip between some of the features.
 ![alt text](https://github.com/diarmuidwhelan/python_project/blob/master/petal_feature_relationship.png "Petal Length & Width")
 
 
-From the above plots, we can see how the features are related and how this differs by species type. In the petal length and width there looks to be a linear positive correlation between length and width and each species type looks to have distinct petal lengtha nd width ranges.
+From the above plots, we can see how the features are related and how this differs by species type. In the petal length and width there looks to be a linear positive correlation between length and width and each species type looks to have distinct petal length and width ranges.
 
-K Means clustering can be used on the features to attempt to group the species together. 
 
-In iris_model.py, I fit a Support Vector Classification and K nearest neighbours model to the iris data. I attempt to validate and test the accuracy of these models by splitting the dataset into a training and test sample.
+In iris_model.py, I fit a Support Vector Classification and K nearest neighbours models to the iris data.  K nearest neighbours is a method which uses the K datapoints closest to the target to predict it's class. Support Vector Machines are a suppervised learning method that attempt to construct a plane between the different classes. These models can be used to predict the species type of a flower with certain features. Probabilities for each outcome are also calculated. However, there is an issue of overfitting the data with these initially where I use the entire dataset to predict the outcome of the same datapoints. In a sense correcting my own homework. To overcome this issue I use some validation techniques to test the robustness of the models.
+
+I attempt to validate and test the accuracy of these models by splitting the dataset into a training and test sample.The results appear to be quite positive. In the case of the K Nearest Neighbours model the number of neighbours chosen is arbitrary. We can optimise the number chosen by looping a few different options and picking the best result. It turns out 1,5 and 10 have the best accuracy with 20 and 30 progressively worse the higher the number of neighbours. 
+
+Further improvements may be made by exploring the different kernel types in SVC and lookinbg at other techniques such as decision trees and random forests.
 
 
 # References
@@ -85,4 +88,9 @@ http://archive.ics.uci.edu/ml/datasets/Iris
 
 www.scipy-lectures.org/advanced/scikit-learn/
 
+https://docs.python.org/3/tutorial/index.html
+
 https://github.com/jakevdp/sklearn_pycon2015
+
+http://nbviewer.jupyter.org/github/donnemartin/data-science-ipython-notebooks/blob/master/scikit-learn/scikit-learn-intro.ipynb
+
